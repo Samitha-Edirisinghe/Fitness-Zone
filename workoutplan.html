@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <title>Home Workout Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/npm.js"></script>
+
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Start Header  -->
+    <header>
+
+
+
+        <div class="container">
+            <div class="logo">
+                <a href="" style="">Fitness <span>Zone</span></a>
+            </div>
+            
+            <a href="javascript:void(0)" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="nav">
+		<nav class="navbar navbar-inverse ">
+                <ul>
+
+                    <li><a href="index.html ">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#index.html" class="btn">BMI</a></li>
+                    <li><a  href="workoutplan.html" class="btn">Workout</a></li>
+                    <li><a  href="mealplan.html" class="btn">Meal Plan</a></li>
+                    <li><a id="Store" href="./cake/cakehube.html" class="btn">Store</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+		</nav>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <div style="clear: both;"></div>
+
+    <div style="margin-top: 64px">
+        <div style="clear: both;"></div>
+        <div class="bg"><img src="images/pexels-leon-ardho-1552242.jpg" width="100%"></div>
+        <div class="mealplan">
+            <h1 style="padding-left: 130px ;font-size: 55px; color: #fff;font-family: sans-serif;">Workouts Plans</h1>
+        </div>
+        <div class="age">
+            <h2 style="color: #fff">Age</h2>
+            <input type="INT" name="age" style="font-size: 27px;border-radius: 6px;">
+        </div>
+        <div class="age">
+            <h2 style="color: #fff">BMI</h2>
+            <input type="INT" name="age" style="font-size: 27px;border-radius: 6px;">
+        </div>
+
+        <div>
+            <div class="age" style="float: left;">
+                <B><p style="font-size: 35px;margin-left: 31px;color: #fff;font-family: oswala & abel">Male</p></B>
+                <input name="female " type="radio" value="sex" style="margin-left: 56px;margin-top: -19px;">
+            </div>
+            <div class="age" style="float: left;margin-left: 118px;">
+                <B><p style="font-size: 35px;color: #fff;font-family: oswala & abel">female</p></B>
+                <input name="female " type="radio" value="sex" style="margin-left: 38px;margin-top: -19px;">
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="age">
+            <div class="Month" style="float: left;margin-right: 96px;margin-left: -136px;margin-top: 50px;">
+                <a href="beginner.html" style="text-decoration: none;font-family: oswala & abel"><B><p>Beginner</p></B></a>
+            </div>
+            <div class="Month" style="float: left;margin-right: 96px;margin-top: 50px">                     
+                <a href="intermediate.html"style="text-decoration: none;font-family: oswala & abel"><B><p>Intermediate</p></B></a>
+            </div>
+            <div class="Month" style="float: left;margin-top: 50px">                                        
+                <a href="advanced.html"style="text-decoration: none;font-family: oswala & abel"><B><p>Advanced</p></B></a>
+            </div>
+        </div>
+    </div>
+    
+
+ <!-- jquery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".ham-burger, .nav ul li a").click(function() {
+
+                $(".nav").toggleClass("open")
+
+                $(".ham-burger").toggleClass("active");
+            })
+            $(".accordian-container").click(function() {
+                $(".accordian-container").children(".body").slideUp();
+                $(".accordian-container").removeClass("active")
+                $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+                $(this).children(".body").slideDown();
+                $(this).addClass("active")
+                $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+            })
+
+            $(".nav ul li a, .go-down").click(function(event) {
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+
+                    // add active class in navigation
+                    $(".nav ul li a").removeClass("active")
+                    $(this).addClass("active")
+                }
+            })
+        })
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 0,
+        });
+        wow.init();
+    </script>
+    
+
+
+
+
+   
+
+
+
+
+
+
+
+
+</body>
+
+</html>
